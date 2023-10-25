@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 - HTML DOM</title>
+</head>
+<body>
+    <h1 id="title">Coffee Shop Menu</h1>
+
+    <ul id="menu">
+        <li>Coffee</li>
+        <li>Capuchino</li>
+        <li>Milk Tea</li>
+        <li id="old-item">Tropical Fruit Tea</li>
+        <li>Peach Tea</li>
+    </ul>
+
+    <button id="btn-update">Update Menu</button>
+
+    <script>
+        let btnUpdate = document.getElementById("btn-update");
+
+        // thêm thao tác xử lý khi click button
+        btnUpdate.addEventListener('click', () => {
+            let titleElem = document.getElementById("title");
+            let menuElem = document.getElementById("menu");
+            let oldItemElem = document.getElementById("old-item");
+
+            // 1. change title color
+            titleElem.style.color = "#FF0000";
+
+            // 2. remove element
+            oldItemElem.remove();
+
+            // 3. add element (Fruit Yogurt)
+            let newItemElem = document.createElement("li");
+            newItemElem.innerText = "Fruit Yogurt";
+
+            menuElem.appendChild(newItemElem);
+        });
+    </script>
+</body>
+</html>

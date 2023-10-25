@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - HTML DOM</title>
+</head>
+<body>
+    <h1 id="title">Python Course Syllabus</h1>
+
+    <ul>
+        <li id="lesson-1">Welcome to Python</li>
+        <li id="lesson-2">Python Fundamental</li>
+        <li id="lesson-3">Python Intermmediate</li>
+    </ul>
+
+    <script>
+        // truy vấn phần tử HTML
+        let titleElem = document.getElementById("title");
+        let lesson1Elem = document.getElementById("lesson-1");
+        let lesson2Elem = document.getElementById("lesson-2");
+        let lesson3Elem = document.getElementById("lesson-3");
+
+        console.log(titleElem);
+
+        // thay đổi nội dung element
+        titleElem.innerText = "Javascript Course Syllabus";
+        lesson1Elem.innerText = "Welcome to Javascript";
+        lesson2Elem.innerText = "Javascript Fundamental";
+        lesson3Elem.innerText = "Javascript Intermmediate";
+    </script>
+</body>
+</html>
